@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FestPlan - Organize sua Festa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FestPlan 🎈</div>
+            <div class="menu">
+                <a href="#locais">Locais</a>
+                <a href="#buffets">Buffets</a>
+                
+                <div id="auth-links" style="display: inline;">
+                    <a href="login.html" class="btn-login">Entrar</a>
+                    <a href="cadastro.html" class="btn-destaque">Cadastrar</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Sua festa perfeita começa aqui.</h1>
+            <p>Escolha o salão, o cardápio e agende tudo em minutos.</p>
+        </section>
+
+        <section id="locais" class="vitrine">
+            <h2>Nossos Salões</h2>
+            <div id="lista-locais" class="cards-container">
+                <p>Carregando locais incríveis...</p>
+            </div>
+        </section>
+
+        <section id="buffets" class="vitrine">
+            <h2>Opções de Buffet</h2>
+            <div id="lista-buffets" class="cards-container">
+                <p>Carregando sabores...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="index_script.js"></script>
+</body>
+</html>

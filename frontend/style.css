@@ -1,0 +1,88 @@
+:root {
+    --primaria: #4a90e2;
+    --secundaria: #f39c12;
+    --fundo: #f4f7f6;
+    --texto: #333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    margin: 0;
+}
+
+/* Header e Menu */
+header {
+    background: white;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primaria);
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--texto);
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+/* O botão de entrar (simples) */
+.btn-login {
+    color: var(--primaria) !important;
+}
+
+/* O botão de cadastrar (destaque) */
+.btn-destaque {
+    background: var(--primaria);
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-destaque:hover {
+    background: #357abd;
+}
+
+/* Estilo para os formulários de Login/Cadastro */
+.container-login, .container {
+    max-width: 400px;
+    margin: 100px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho do input */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--secundaria);
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}

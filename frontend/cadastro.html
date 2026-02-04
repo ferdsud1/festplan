@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>FestPlan - Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Criar Conta no FestPlan</h2>
+        <form id="formCadastro">
+            <input type="text" id="nome" placeholder="Nome Completo" required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <input type="text" id="cpf" placeholder="CPF">
+            <input type="text" id="telefone" placeholder="Telefone">
+            <button type="submit">Cadastrar</button>
+        </form>
+        
+        <p id="mensagem" class="msg-feedback"></p>
+        
+        <p>Já tem uma conta? <a href="login.html">Faça login aqui</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
