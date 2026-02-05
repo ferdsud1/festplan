@@ -1,88 +1,124 @@
-:root {
-    --primaria: #4a90e2;
-    --secundaria: #f39c12;
-    --fundo: #f4f7f6;
-    --texto: #333;
+/* Container que segura todos os cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--fundo);
-    color: var(--texto);
-    margin: 0;
-}
-
-/* Header e Menu */
-header {
-    background: white;
-    padding: 1rem 5%;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-nav {
+/* O card em si */
+.card-item {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-align: left;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Ajuste da imagem dentro do card */
+.card-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Espaçamento das informações */
+.card-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.tag-vermelha {
+    background: #d32f2f;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.preco-label {
+    margin: 10px 0 0 0;
+    font-size: 12px;
+    color: #777;
+    text-transform: uppercase;
+}
+
+.preco-valor {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Botão Selecionar/Detalhes */
+.btn-selecionar {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0 0 8px 8px;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-selecionar:hover {
+    background: #357abd;
+}
+/* Fundo escuro atrás da janela */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primaria);
-}
-
-.menu a {
-    text-decoration: none;
-    color: var(--texto);
-    margin-left: 20px;
-    font-weight: 500;
-}
-
-/* O botão de entrar (simples) */
-.btn-login {
-    color: var(--primaria) !important;
-}
-
-/* O botão de cadastrar (destaque) */
-.btn-destaque {
-    background: var(--primaria);
-    color: white !important;
-    padding: 8px 20px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.btn-destaque:hover {
-    background: #357abd;
-}
-
-/* Estilo para os formulários de Login/Cadastro */
-.container-login, .container {
-    max-width: 400px;
-    margin: 100px auto;
-    background: white;
+/* A caixa branca dos detalhes */
+.modal-content {
+    background-color: #fff;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-form input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box; /* Garante que o padding não aumente o tamanho do input */
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    background: var(--secundaria);
-    border: none;
-    color: white;
-    font-weight: bold;
+.close-button {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
     cursor: pointer;
-    border-radius: 4px;
+    color: #aaa;
+}
+
+.close-button:hover {
+    color: #333;
 }
